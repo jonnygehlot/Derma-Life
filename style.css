@@ -1,0 +1,748 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    /* user-select: none; */
+}
+
+:root {
+    --linear-gradient-buttun: linear-gradient(#5865a8, #434d81);
+    --section-bgcolor-switch: #f9fafc;
+    
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(4deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(30deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(30deg) rotateY(360deg);
+    }
+
+}
+
+.fixed{
+    position: fixed;
+    right: 15px;
+    top: 350px;
+    font-size: 26px;
+    color: white;
+    gap: 15px;
+}
+.fixed .fa-whatsapp{
+    background-color: #25d366;
+    padding: 5px 8px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    transition: 1s;
+}
+.fa-whatsapp::after{
+    font-size: 15px;
+}
+.fixed .fa-phone{
+    font-size: 16px;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    transition: 1s;
+    border: 2px solid #ccc;
+}
+.fa-phone::after, .fa-whatsapp::after{
+    content: 'Call';
+    position: absolute;
+    color: white;
+    background: var(--linear-gradient-buttun);
+    padding: 10px 50px;
+    border-radius: 50px;
+    right:  0px;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    z-index: -17;
+}
+.fa-whatsapp:hover, .fa-phone:hover{
+    transform: rotate(360deg);
+}
+.fa-whatsapp::after{
+    content: 'WhatsApp';
+}
+.fa-phone:hover::after, .fa-whatsapp:hover::after{
+    right: 50px;
+    opacity: 1;
+    z-index: 17;
+}
+a {
+    color: black;
+}
+
+.fs {
+    max-width: 1400px;
+    margin: auto;
+}
+.fs-extra{
+    max-width: 1000px;
+    margin: auto;
+}
+.flex{
+    display: flex;
+}
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-clmn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 3px 0px grey;
+    z-index: 999999999999;
+    overflow: hidden;
+}
+
+#nav-head ul {
+    display: flex;
+    gap: 30px;
+}
+
+#nav-head ul li a {
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#nav-head.ul li a:active {
+    border-bottom: 1px solid green;
+    transition: 1s;
+}
+
+#nav-head ul li i {
+    color: #434d81;
+}
+
+#nav-head ul li:last-child a {
+    color: white;
+    background: var(--linear-gradient-buttun);
+    padding: 10px;
+}
+
+#nav-head ul li:last-child {
+    transition: 1s;
+    animation: tilt 0.8s 0s infinite ease-in-out;
+}
+
+#section-1 {
+    background-image: url(Images/background12apr.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bannercentercontent h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.bannercentercontent article {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+
+.bannerform {
+    padding: 50px;
+}
+
+.bannerform form input{
+    padding: 5px 15px;
+}
+.bannerform figure {
+    flex-basis: 50%;
+}
+
+.bannerform figure img {
+    width: 100%;
+}
+
+.bannercentercontent form {
+    flex-basis: 35%;
+    background-color: white;
+    padding: 30px 0;
+}
+
+.bannercentercontent form h2 {
+    font-size: 26px;
+    text-align: center;
+    padding: 20px 0;
+    color: #434d81;
+}
+
+.bannercentercontent form label,
+.bannercentercontent form input,
+.bannercentercontent form textarea {
+    width: 90%;
+    margin: auto;
+    line-height: 30px;
+    color: #666;
+}
+
+.bannercentercontent form input,
+.bannercentercontent form textarea {
+    margin-bottom: 10px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.bannercentercontent form input:focus,
+.bannercentercontent form textarea:focus {
+    outline: 1px solid rgb(121, 121, 216);
+}
+
+form label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    padding: 15px 40px;
+    margin: auto;
+    background: var(--linear-gradient-buttun);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#section-2 {
+    background-color: var(--section-bgcolor-switch);
+    padding: 50px 0;
+}
+
+.box {
+    flex-basis: 30%;
+    height: 100%;
+    margin: 1.5%;
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.box:hover {
+    box-shadow: 0 0 10px 0.1px rgb(226, 226, 226);
+}
+
+.box figure {
+    margin-bottom: 20px;
+}
+
+.box figure i {
+    padding: 15px;
+    background-color: wheat;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.box b {
+    font-size: 36px;
+}
+
+.box article {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+    line-height: 30px;
+}
+
+.box figure .fa-suitcase-medical {
+    color: #6758f3;
+    background-color: #f0eefe;
+}
+
+.box figure .fa-face-smile-beam {
+    color: green;
+    background-color: #ebf7ec;
+}
+
+.box figure .fa-thumbs-up {
+    color: blue;
+    background-color: #f0eefe;
+}
+
+.box article {
+    color: #666;
+}
+
+#section-3 {
+    padding: 50px 0;
+}
+
+.section3content {
+    flex-basis: 60%;
+    line-height: 40px;
+}
+
+.section3content h3 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section3content article {
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+}
+
+.Dermatologiestphoto {
+    flex-basis: 30%;
+    text-align: center;
+    line-height: 30px;
+    padding: 15px;
+    background-color: #f9fafc;
+}
+
+.para {
+    line-height: 20px;
+}
+
+.Dermatologiestphoto figure img {
+    width: 100%;
+}
+
+#section-4 {
+    padding: 50px 0;
+}
+
+#section-4 h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.decorerotate {
+    width: 150px;
+    padding: 15px 0;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #2997b4;
+}
+
+.rotatinganimation figure {
+    animation: rotate 3s 0s infinite ease-in-out;
+    transform-style: preserve-3d;
+}
+
+#nav-gallery ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+}
+#nav-gallery ul li{
+    padding: 0px 20px;
+}
+#nav-gallery ul li a {
+    color: #6c757d;
+    font-weight: 600;
+    position: relative;
+    padding: 0px 20px;
+}
+a::after{
+    content: '';
+    width: 100%;
+    transition: 1s;
+    bottom: -12px;
+    left: 0;
+    height: 2px;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    background-color: #5865a8;
+}
+#nav-gallery ul li a:hover::after{
+    transform: scaleX(1);
+}
+.photosection{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.photosection figure{
+    flex-basis: 30%;
+    margin: 1.5%;
+    overflow: hidden;
+    position: relative;
+}
+.photosection figure span{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 9999;
+    right: 25px;
+    top: -40px;
+    font-size: 16px;
+    transition: 0.3s;
+    background-color: white;
+    border-radius: 50%;
+    color: var(--linear-gradient-buttun);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2997b4;
+    margin: auto;
+    transform: translateY(0px) rotate(0deg) scale(0);
+}
+.photosection figure:hover span{
+    transform: translateY(102px) rotate(-720deg) scale(1.2);
+}
+.photosection figure img{
+    transition: 1s;
+    width: 100%;
+    position: relative;
+}
+.photosection figure img:hover{
+    filter: brightness(0.5);
+    transform: scale(1.2);
+}
+.photosection figure::after{
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: 15px;
+    width: 50px;
+    height: 100px;
+    background: var(--linear-gradient-buttun);
+    border-radius: 0 0 50px 50px;
+    transition: 0.3s;
+}
+
+.photosection figure:hover::after{
+   top: 0;
+}
+#section-5{
+    padding: 50px 0;
+    text-align: center;
+}
+.reviews{
+    gap: 15px;
+    position: relative;
+    padding: 40px 0;
+}
+
+#section-5 h2{
+    font-size: 36px;
+}
+.card
+{
+    position: relative;
+    flex-basis: 33%;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    padding: 20px 20px 0 20px;
+    line-height: 26px;
+}
+.card:hover{
+    box-shadow: 0 2px 20px 1px rgb(231, 229, 227);
+}
+.card h3{
+    font-size: 21px;
+    font-weight: 600;
+}
+.card article p{
+    margin-bottom: 20px;
+}
+.card i{
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    font-size: 20px;
+    color: #eaeaea;
+    font-size: 40px;
+    transition: 0.3s;
+}
+.card:hover i{
+    color: #2997b4;
+}
+.leftchevi,.rightchevi{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    box-shadow: 0 2px 10px 0px rgb(240, 236, 236);
+    transition: 0.4s;
+}
+.lc{
+    left: 0;
+}
+.rc{
+    right: 0;
+}
+
+.reviews:hover .lc{
+    left: -60px;
+    opacity: 1;
+}
+.reviews:hover .rc{
+    right: -60px;
+    opacity: 1;
+}
+#section-6>h3{
+    text-align: center;
+    font-size: 36px;
+}
+.services{
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.Visting_Cards{
+    flex-basis: 49% ;
+    box-shadow: 0 0 10px 0px rgb(233, 232, 232);
+    padding: 20px 0;
+}
+.Visting_Cards figure{
+    width: 80px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #2f6c96;
+}
+.Visting_Cards figure img{
+    width: 100%;
+}
+.Visting_Cards hr{
+    width: 100%;
+    margin-top: 15px;
+} 
+.Visting_Cards h3{
+    font-size: 20px;
+    color: #2f6c96;
+}
+.Visting_Cards article{
+    padding: 20px;
+    text-align: justify;
+    color: #6c757d;
+    font-size: 15px;
+    line-height: 30px;
+}
+.Visting_Cards article a{
+    color: #2f6c96;
+    font-size: 16px;
+    font-weight: 600;
+}
+#section-7{
+    padding: 50px 0;
+}
+#section-7>h3{
+    text-align:center;
+    font-size: 26px;
+}
+.successlinks{
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+.flexi{
+    flex-basis: 48%;
+    margin: 1%;
+}
+.flexi iframe{
+    width: 100%;
+    height: 300px;
+}
+.boxi{
+    flex-basis: 31%;
+    margin: 1%;
+}
+#section-8{
+    padding: 50px 0;
+}
+#section-8>h3{
+    text-align: center;
+    font-size: 36px;
+}
+#section-9{
+    padding: 50px 0;
+}
+#section-9 h3{
+    text-align: center;
+    font-size: 36px;
+}
+#section-9 article{
+    color: #6c757d;
+    text-align: center;
+    line-height: 26px;
+}
+.whylist{
+    color: #6c757d;
+}
+.whylist ul{
+    flex-basis: 48%;
+    margin: 1%;
+    align-self: flex-start;
+}
+.whylist ul li{
+    list-style-type: square;
+    line-height: 34px;
+    font-size: 18px;
+}
+#section-10{
+    padding: 50px 0;
+}
+#section-10>h3{
+    text-align: center;
+    font-size: 36px;
+}
+.address{
+    flex-basis: 48%;
+    margin: 0 1% 1% 1%;
+    line-height: 30px;
+    align-self: flex-start;
+}
+.map{
+    flex-basis: 50%;
+}
+.map iframe{
+    width: 100%;
+}
+.address h3{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.address aside{
+    flex-basis: 20%;
+    line-height: 50px;
+    align-items: flex-start;
+    align-self: flex-start;
+    color: #666;
+}
+.address article{
+    line-height: 50px;
+    color: #6c757d;
+}
+.bigp{
+    line-height: 25px;
+}
+
+.section-11{
+    padding: 50px 0;
+}
+.section-11>.fs-extra>h3{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+.form{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.inputs{
+    flex-basis: 48%;
+    margin: 1%;
+    align-items: flex-start;
+    gap: 5px;
+}
+.inputs label{
+    font-size: 14px;
+    margin: 0 10px;
+    color: #6c757d;
+}
+.inputs input{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.specialcaseform{
+    width: 100%;
+}
+.specialcaseform label{
+    align-self: flex-start;
+    font-size: 14px;
+    margin: 10px;
+    color: #6c757d;
+    padding: 0 15px;
+}
+.specialcaseform textarea{
+    width: 98%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.form button{
+    margin: 20px auto;
+}
+
+footer{
+    background-color: #2e3136;
+    padding: 30px 0;
+}
+footer figure{
+        padding-bottom: 30px;
+}
+footer span{
+    color: white;
+    padding: 25px;
+}
+footer span a{
+    color: white        ;
+}

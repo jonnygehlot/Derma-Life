@@ -1,0 +1,56 @@
+@media only screen and (min-width:200px) and (max-width:575px) {
+   nav {
+      display: none;
+   }
+   .fixed {
+      display: none;
+   }
+
+   #section-1,
+   #section-2,
+   #section-3,
+   #section-4,
+   #section-5,
+   #section-6,
+   #section-8,
+   #section-9,
+   #section-10,
+   #section-11,
+   #section-12{
+      padding: 50px 20px;
+   }
+
+   .bannerform,
+   #section-1 .bannerform,
+   #section-2 .fs,
+   #section-3 .flex-sb,
+   #section-4 .photosection,
+   #section-5 .reviews,
+   #section-6 .services,
+   #section-7 .successlinks,
+   #section-8 .casestudies,
+   #section-9 .whylist,
+   #section-10 .flex-sb,
+   form {
+      flex-direction: column;
+   }
+   .successlinks,
+   .casestudies{
+      max-width: 370px;
+      gap: 20px;
+   }
+   #section-7 iframe,
+   .casestudies iframe{
+      width: 370px;
+   }
+   .box{
+      width: 100%;
+   }
+   .rightchevi,.leftchevi{
+      display: none;
+   }
+   footer{
+      text-align: center;
+      line-height: 30px;
+   }
+}
